@@ -1,0 +1,58 @@
+# Это образ системы сборки Gradle для приложений Java
+# https://gradle.org/
+# https://github.com/gradle/gradle
+image: gradle:alpine
+
+# Скрипт подготовки среды (аналог @BeforeAll в Junit)
+before_script:
+  - java -version #Просто выведем версию Java
+
+# Стадии прохождения Pipeline
+stages:
+  - build
+  - test
+  - deploy
+
+# Джоба
+build app: #Название джобы
+  stage: build #Стадия, к которой она относится
+  tags: [docker] #Массив тэгов, для выбора ранера
+  script: #Блок описания скриптов
+    - echo "Building" #Выводим сообщение в консоль
+    - mkdir build #Создаем папку build
+    - echo "1. Building is done." >> build/result.txt #В папке создаем файл и выводим в него сообщение
+  artifacts: #Блок работы с артефактами
+    paths: #Указываем пути, которые хотим добавить в артефакты
+      - build/ #Сам путь
+    expire_in: 1 week #Определяем как долго GitLab будет хранить наши файлы
+
+api tests:
+  stage: test
+  tags: [docker]
+  script:
+    - echo "Api testing"
+    - echo "2. Api testing is done." >> build/result.txt
+  artifacts: #Блок работы с артефактами
+    paths: #Указываем пути, которые хотим добавить в артефакты
+      - build/ #Сам путь
+    expire_in: 1 week #Определяем как долго GitLab будет хранить наши файлы
+
+ui tests:
+  stage: test
+  tags: [docker]
+  dependencies:
+    - api tests
+  script:
+    - echo "UI testing"
+    - echo "3. UI testing is done." >> build/result.txt
+  artifacts: #Блок работы с артефактами
+    paths: #Указываем пути, которые хотим добавить в артефакты
+      - build/ #Сам путь
+    expire_in: 1 week #Определяем как долго GitLab будет хранить наши файлы
+
+deploy on staging:
+  stage: deploy
+  tags: [docker]
+  script:
+    - echo "Deploing on staging server"
+    - cat build/result.txt

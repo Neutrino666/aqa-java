@@ -1,0 +1,81 @@
+// Подробнее про синтаксис build.gradle смотрите по ссылке
+// https://docs.gradle.org/current/dsl/org.gradle.api.Project.html
+
+// Плагины
+// https://docs.gradle.org/current/dsl/org.gradle.plugin.use.PluginDependenciesSpec.html
+// Блок верхнего уровня в котором мы расширяем Gradle
+// готовыми библиотеками и применяем таски этих библиотек в проекте
+plugins {
+    // Java - это основной плагин, который поставляется вместе в Gradle
+    id 'java'
+    // Плагин для работы с Allure
+    id 'io.qameta.allure' version '2.9.6'
+}
+
+// Группа этого проекта.
+// Группа по умолчанию использует путь с точками в качестве разделителей.
+group 'ru.education'
+
+// Версия проекта
+version '1.0-SNAPSHOT'
+
+// Репозиторий (Хранилище)
+// https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.dsl.RepositoryHandler.html
+// В блоке репозиторий указывается откуда именно будут скачиваться библиотеки,
+// которые используются в проекте.
+repositories {
+    // MavenCentral - это главный репозиторий с большинством доступных библиотек
+    mavenCentral()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+// Зависимости
+// https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.dsl.DependencyHandler.html
+// Перечисляются используемые в проекте библиотеки
+dependencies {
+
+// compileOnly — для зависимостей, которые необходимы для компиляции вашего производственного кода, но не должен быть частью пути к классам среды выполнения
+// implementation — используется для компиляции и выполнения.
+// runtimeOnly — используется только во время выполнения, а не для компиляции.
+// testCompileOnly — то же, что и compileOnly, только для тестов.
+// testImplementation — тестовый эквивалент implementation
+// testRuntimeOnly — тестовый эквивалент runtimeOnly.
+
+    // Junit
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.8.2'
+
+    // Rest-assured
+    testImplementation 'io.rest-assured:rest-assured:5.0.1'
+
+    // JSONObject
+    implementation 'org.json:json:20210307'
+
+    // Allure
+    testImplementation 'io.qameta.allure:allure-rest-assured:2.13.5'
+    testImplementation 'io.qameta.allure:allure-junit5:2.13.5'
+
+    // Sqlite JDBC
+    implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
+
+    // Sqlite Hibernate
+    testImplementation 'org.hibernate:hibernate-core:5.4.22.Final'
+    implementation 'javax.persistence:javax.persistence-api:2.2'
+    implementation 'com.github.gwenn:sqlite-dialect:0.1.2'
+
+    // Lombok
+    testImplementation 'org.projectlombok:lombok:1.18.20'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
+}
+
+// Тест
+// https://docs.gradle.org/current/dsl/org.gradle.api.tasks.testing.Test.html
+// Определяет что будет исполняться при вызове таски "test"
+test {
+    // Находит и выполняет тесты построенные на платформе Junit
+    useJUnitPlatform()
+}

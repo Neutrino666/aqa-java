@@ -1,0 +1,63 @@
+# Это образ системы сборки Gradle для приложений Java
+# https://gradle.org/
+# https://github.com/gradle/gradle
+image: ubuntu
+
+variables:
+  GIT_VAR: "Начинаем логировать данные."
+
+# Скрипт подготовки среды (аналог @BeforeAll в Junit)
+before_script:
+  - java -version
+  - echo "$GIT_VAR"
+
+# Шаблон, который мы можем переиспользовать
+.job_template: &artifacts_template
+  before_script:
+    - mkdir -p ./build/allure-results
+
+# Стадии прохождения Pipeline
+stages:
+  - test
+  - report
+  - deploy
+
+api_tests:
+  stage: test
+  tags: [docker]
+  <<: *artifacts_template
+  script:
+    - echo "Api testing"
+    - gradle test --stacktrace --info
+  artifacts:
+    when: always
+    paths:
+      - ./build/allure-results
+  allow_failure: true
+
+create_report:
+  stage: report
+  tags: [docker]
+  dependencies:
+    - api_tests
+  script:
+    - echo "Create allure report"
+    - allure generate ./build/allure-results --output ./allure-reports
+  artifacts:
+    expire_in: 30 days
+    paths:
+      - ./allure-reports/*
+
+pages:
+  stage: deploy
+  tags: [docker]
+  when: always
+  script:
+    - echo "Public allure report to GitLab pages"
+    - mkdir .public
+    - cp -r allure-reports/* .public
+    - mv .public public
+  artifacts:
+    expire_in: 3 days
+    paths:
+      - public

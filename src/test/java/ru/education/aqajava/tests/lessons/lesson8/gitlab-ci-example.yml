@@ -1,0 +1,19 @@
+# Это образ системы сборки Gradle для приложений Java
+# https://gradle.org/
+# https://github.com/gradle/gradle
+image: gradle:alpine
+
+# Скрипт подготовки среды (аналог @BeforeAll в Junit)
+before_script:
+  - java -version
+
+# Стадии прохождения Pipeline
+stages:
+  - test
+
+# Пример самой простой джобы
+first job:
+  stage: test
+  tags: [docker]
+  script:
+    - echo ok
