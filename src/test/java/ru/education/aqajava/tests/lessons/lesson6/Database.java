@@ -15,6 +15,7 @@ public class Database {
     void getGenre() {
         System.out.println(getAllGenres());
     }
+
     @Test
     void printGenres() {
         insertNewGenre("Nu");

@@ -11,7 +11,7 @@ public abstract class Car implements Vehicle {
 
     public void setColor(String color) {
 
-        if (color.equals("black") || color.equals("white") ) {
+        if (color.equals("black") || color.equals("white")) {
             this.color = color;
         }
 

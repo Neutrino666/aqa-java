@@ -19,27 +19,12 @@ public class OOP {
     }
 
 
-
-
-
-
-
-
     @Test
     void truckExample() {
         Truck truck = new Truck();
         truck.beep();
         truck.go();
     }
-
-
-
-
-
-
-
-
-
 
 
     @Test

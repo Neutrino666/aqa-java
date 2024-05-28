@@ -21,6 +21,7 @@ tags: idea, gradle, java, autotest, assertions
 1. Установить idea, создать проект и вывести в консоль "Work!";
 2. Глубже изучить теорию Java. Ссылки в ресурсах.
 
-Как минимум изучить раздел Java Introduction на сайте [Туториал по Java от programiz](https://www.programiz.com/java-programming) 
+Как минимум изучить раздел Java Introduction на
+сайте [Туториал по Java от programiz](https://www.programiz.com/java-programming)
 
 **Рекомендация:** если что-то не непоняли из раздела,обязательно зафиксируйте и задайте вопрос лекторам  

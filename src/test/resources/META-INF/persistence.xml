@@ -9,10 +9,10 @@
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:sqlite:src/test/resources/sqlite/chinook.db"/>
-<!--            <property name="hibernate.connection.url" value="jdbc:sqlite:/home/irek/sqlite/chinook.db"/>-->
+            <!--            <property name="hibernate.connection.url" value="jdbc:sqlite:/home/irek/sqlite/chinook.db"/>-->
             <property name="hibernate.connection.username" value=""/>
             <property name="hibernate.connection.password" value=""/>
-<!--            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLiteDialect"/>-->
+            <!--            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLiteDialect"/>-->
             <property name="hibernate.dialect" value="org.sqlite.hibernate.dialect.SQLiteDialect"/>
             <property name="hibernate.cache.use_query_cache" value="false"/>
         </properties>

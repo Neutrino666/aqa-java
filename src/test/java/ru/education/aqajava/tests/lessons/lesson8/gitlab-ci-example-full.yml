@@ -16,7 +16,7 @@ stages:
 # Джоба
 build app: #Название джобы
   stage: build #Стадия, к которой она относится
-  tags: [docker] #Массив тэгов, для выбора ранера
+  tags: [ docker ] #Массив тэгов, для выбора ранера
   script: #Блок описания скриптов
     - echo "Building" #Выводим сообщение в консоль
     - mkdir build #Создаем папку build
@@ -28,7 +28,7 @@ build app: #Название джобы
 
 api tests:
   stage: test
-  tags: [docker]
+  tags: [ docker ]
   script:
     - echo "Api testing"
     - echo "2. Api testing is done." >> build/result.txt
@@ -39,7 +39,7 @@ api tests:
 
 ui tests:
   stage: test
-  tags: [docker]
+  tags: [ docker ]
   dependencies:
     - api tests
   script:
@@ -52,7 +52,7 @@ ui tests:
 
 deploy on staging:
   stage: deploy
-  tags: [docker]
+  tags: [ docker ]
   script:
     - echo "Deploing on staging server"
     - cat build/result.txt

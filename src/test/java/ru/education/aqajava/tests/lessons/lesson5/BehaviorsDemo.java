@@ -26,7 +26,7 @@ public class BehaviorsDemo extends BaseTest {
                 .put("name", "Каркуша")
                 .put("status", "available");
 
-     apiHelper.post(Endpoints.NEW_PET, reqBody.toString(), resp200).then()
+        apiHelper.post(Endpoints.NEW_PET, reqBody.toString(), resp200).then()
                 .body("$", Matchers.notNullValue());
 
     }

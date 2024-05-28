@@ -24,25 +24,25 @@ public class Junit {
 
     @Test
     @Order(1)
-    void test1(){
+    void test1() {
         System.out.println("test1");
     }
 
     @Test
     @Order(2)
-    void test2(){
+    void test2() {
         System.out.println("test2");
     }
 
     @Test
     @Order(3)
-    void test3(){
+    void test3() {
         System.out.println("test3");
     }
 
     @Test
     @Order(4)
-    void test4(){
+    void test4() {
         System.out.println("test4");
     }
 

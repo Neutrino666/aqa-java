@@ -14,6 +14,6 @@ stages:
 # Пример самой простой джобы
 first job:
   stage: test
-  tags: [docker]
+  tags: [ docker ]
   script:
     - echo ok

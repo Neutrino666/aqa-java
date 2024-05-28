@@ -55,6 +55,7 @@ public class ApiHelper {
                 .when()
                 .get(endpoint);
     }
+
     @Step("get {endpoint}")
     public Response getWithAuth(String endpoint, ResponseSpecification resp) {
         return given()
