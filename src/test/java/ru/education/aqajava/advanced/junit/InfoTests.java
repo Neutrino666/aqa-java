@@ -6,13 +6,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("TestInfo Demo")
-class TestInfoDemo {
-
+class InfoTests {
 
     @BeforeEach
-    void init(TestInfo testInfo) {
+    void beforeEach(TestInfo testInfo) {
         String displayName = testInfo.getDisplayName();
-        assertTrue(displayName.equals("TEST 1") || displayName.equals("test2()"));
+        assertTrue(displayName.equals("TEST 1")
+                || displayName.equals("test2()"));
     }
 
     @Test
@@ -26,6 +26,5 @@ class TestInfoDemo {
     @Test
     void test2() {
     }
-
 }
 

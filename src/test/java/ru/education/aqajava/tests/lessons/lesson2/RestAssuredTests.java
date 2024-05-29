@@ -111,6 +111,4 @@ public class RestAssuredTests {
                 .log().all()
                 .statusCode(200);
     }
-
-
 }
