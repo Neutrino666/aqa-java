@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 
 //import static io.restassured.RestAssured.given;
 
-public class RestAssured {
+public class RestAssuredTests {
 
     @Test
     void checkStoreInventoryStatusCode() {

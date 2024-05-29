@@ -1,4 +1,4 @@
-package ru.education.aqajava.tests.lessons.lesson4.JunitAnnotation;
+package ru.education.aqajava.advanced.junit;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 import static java.time.Duration.ofSeconds;
 import static org.junit.jupiter.api.Assertions.*;
 
-class AssertionsDemo {
+class AssertionsTests {
     /*
      * -----Осветил----
      * assertEquals

@@ -1,10 +1,10 @@
-package ru.education.aqajava.tests.lessons.lesson4.JunitAnnotation;
+package ru.education.aqajava.advanced.junit;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 @Disabled("Disabled until bug #100 has been fixed")
-class DisabledClassDemo {
+class DisabledClassTests {
 
     @Test
     void testWillBeSkipped() {

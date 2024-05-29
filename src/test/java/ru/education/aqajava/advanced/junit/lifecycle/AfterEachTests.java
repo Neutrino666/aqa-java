@@ -1,13 +1,13 @@
-package ru.education.aqajava.tests.lessons.lesson4.JunitAnnotation.lifecycle;
+package ru.education.aqajava.advanced.junit.lifecycle;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-public class AfterEachDemo {
+public class AfterEachTests {
 
     @AfterEach
-    void beforeEach() {
-        System.out.println("BeforeEach ");
+    void afterEach() {
+        System.out.println("AfterEach ");
     }
 
     @Test
@@ -18,10 +18,5 @@ public class AfterEachDemo {
     @Test
     void test2() {
         System.out.println("-> test2");
-    }
-
-    @Test
-    void test3() {
-        System.out.println("-> test3");
     }
 }

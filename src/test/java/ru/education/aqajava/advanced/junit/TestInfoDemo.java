@@ -1,4 +1,4 @@
-package ru.education.aqajava.tests.lessons.lesson4.JunitAnnotation;
+package ru.education.aqajava.advanced.junit;
 
 import org.junit.jupiter.api.*;
 

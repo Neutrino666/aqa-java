@@ -8,7 +8,7 @@
  * https://www.eclipse.org/legal/epl-v20.html
  */
 
-package ru.education.aqajava.tests.lessons.lesson4.JunitAnnotation;
+package ru.education.aqajava.advanced.junit;
 
 public class StringUtils {
 

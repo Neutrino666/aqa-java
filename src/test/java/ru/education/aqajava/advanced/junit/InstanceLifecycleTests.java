@@ -1,13 +1,17 @@
-package ru.education.aqajava.tests.lessons.lesson4.JunitAnnotation;
+package ru.education.aqajava.advanced.junit;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
 
-//при @TestInstance(TestInstance.Lifecycle.PER_METHOD) для каждого тестого метода создается отдельный класс.Используется по умолчанию
-//при @TestInstance(TestInstance.Lifecycle.PER_CLASS) все тестовые методы шарят один объект
+// При @TestInstance(TestInstance.Lifecycle.PER_METHOD)
+// для каждого тестового метода создается отдельный класс.
+// Используется по умолчанию
+
+// При @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+// все тестовые методы используют один объект
 @TestInstance(TestInstance.Lifecycle.PER_METHOD)
-public class InstanceLifecycle {
+public class InstanceLifecycleTests {
 
     private int instanceVar = 0;
 
