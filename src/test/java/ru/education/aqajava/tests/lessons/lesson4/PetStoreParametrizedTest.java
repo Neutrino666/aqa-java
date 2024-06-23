@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import ru.education.aqajava.tests.lessons.lesson5.BaseTest;
-import ru.education.aqajava.tests.lessons.lesson5.apiHelper.Endpoints;
+import ru.education.aqajava.tests.lessons.lesson5.structure.apiHelper.Endpoints;
 
 import java.util.stream.Stream;
 

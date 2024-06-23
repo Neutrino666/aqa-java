@@ -18,25 +18,9 @@ public class Sout {
 
     @Test
     void sout3() {
+        String name = "World";
+        String pattern = "Hello, %s!";
 
-        String name = "Irek!";
-        String pattern = "Hellooooooooooooooooooooooooooooo %s !!!!!!!!!!!!!!!!!!!!!";
-
-//        System.out.println("asd"+" Sirius "+"dfg");
-
-        System.out.printf(pattern, 4);
-//        System.out.println();
-//        System.out.println("str1".equals("str1"));
-//        System.out.println("str1" == "str1"); // Недопустим
-//        System.out.println(12 == 12);
-
-//        System.out.println(pattern.replace("%s", name));
-
+        System.out.printf(pattern, name);
     }
-
-    @Override
-    public boolean equals(Object o) {
-        return super.equals(o);
-    }
-
 }

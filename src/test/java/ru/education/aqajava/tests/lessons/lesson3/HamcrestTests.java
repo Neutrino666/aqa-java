@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class GitAndHamcrest {
+public class HamcrestTests {
 
     @Test
     void checkSoldItem() {
@@ -51,6 +51,5 @@ public class GitAndHamcrest {
         assertThat("wordpress", Matchers.anyOf(
                 Matchers.containsString("word"),
                 Matchers.containsString("paper")));
-
     }
 }

@@ -4,7 +4,7 @@ import org.hamcrest.Matchers;
 import org.json.JSONObject;
 import org.junit.jupiter.api.*;
 import ru.education.aqajava.tests.lessons.lesson5.BaseTest;
-import ru.education.aqajava.tests.lessons.lesson5.apiHelper.Endpoints;
+import ru.education.aqajava.tests.lessons.lesson5.structure.apiHelper.Endpoints;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -91,7 +91,6 @@ public class RestAssuredTests {
                 .statusCode(200);
     }
 
-
     @Test
     void updatePet() {
         String dogsName = "chappi";

@@ -1,4 +1,4 @@
-package ru.education.aqajava.tests.lessons.lesson5.apiHelper;
+package ru.education.aqajava.tests.lessons.lesson5.structure.apiHelper;
 
 public class Endpoints {
 

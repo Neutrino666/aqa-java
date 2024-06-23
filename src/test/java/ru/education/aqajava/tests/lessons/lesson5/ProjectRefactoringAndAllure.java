@@ -7,7 +7,7 @@ import org.json.JSONObject;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ru.education.aqajava.tests.lessons.lesson5.apiHelper.Endpoints;
+import ru.education.aqajava.tests.lessons.lesson5.structure.apiHelper.Endpoints;
 
 public class ProjectRefactoringAndAllure extends BaseTest {
 
