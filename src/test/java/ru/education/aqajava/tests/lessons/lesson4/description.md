@@ -1,7 +1,5 @@
 # Возможности Junit5
 
-tags: junit5, parametrized
-
 ## План
 
 - Основные аннотации Junit5 для работы;
@@ -16,8 +14,7 @@ tags: junit5, parametrized
 
 ## Лекция
 
-Junit умеет
-находить автотесты в проекте
+Junit умеет находить автотесты в проекте
 
 Добавить в файл build.gradle:
 
@@ -40,7 +37,7 @@ test {
 - Про Assumptions
   [JUnit 5 Assumptions](https://howtodoinjava.com/junit5/junit-5-assumptions-examples/) ,[Полный список Assumptions](https://junit.org/junit5/docs/5.0.0/api/org/junit/jupiter/api/Assumptions.html)
 
-- Про Асерты (Assertions)
+- Про Assertions
   [Assertions habr](https://habr.com/ru/post/591587/)
   или [Writing Assertions With JUnit 5 Assertion API](https://www.petrikainulainen.net/programming/testing/junit-5-tutorial-writing-assertions-with-junit-5-api/),
 

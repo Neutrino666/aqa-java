@@ -1,4 +1,4 @@
-package ru.education.aqajava.tests.lessons.lesson5;
+package ru.education.aqajava.tests.lessons.lesson5.structure.tests;
 
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -8,27 +8,27 @@ import org.hamcrest.Matchers;
 import org.json.JSONObject;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ru.education.aqajava.tests.lessons.lesson5.structure.apiHelper.Endpoints;
+import ru.education.aqajava.tests.lessons.lesson5.structure.helpers.Endpoints;
 
 @Epic("Petstore api regression tests")
-public class BehaviorsDemo extends BaseTest {
+public class AllureAnnotationTests extends BaseTest {
 
     @Test
     @DisplayName("Add a new pet to the store")
     @TmsLink("156")
     @Feature("Pets section")
     @Story("create new pet")
-    void addNewPetStoreTest() {
+    void addNewPetTest() {
 
-        JSONObject reqBody = new JSONObject()
+        JSONObject jsonBody = new JSONObject()
                 .put("id", 0)
                 .put("category", new JSONObject().put("name", "birds"))
                 .put("name", "Каркуша")
                 .put("status", "available");
 
-        apiHelper.post(Endpoints.NEW_PET, reqBody.toString(), resp200).then()
+        apiHelper.post(Endpoints.NEW_PET, jsonBody.toString(), resp200)
+                .then()
                 .body("$", Matchers.notNullValue());
-
     }
 
 }

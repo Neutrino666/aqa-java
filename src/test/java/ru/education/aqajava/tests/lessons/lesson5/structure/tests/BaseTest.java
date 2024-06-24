@@ -1,7 +1,7 @@
-package ru.education.aqajava.tests.lessons.lesson5;
+package ru.education.aqajava.tests.lessons.lesson5.structure.tests;
 
 import io.restassured.specification.ResponseSpecification;
-import ru.education.aqajava.tests.lessons.lesson5.structure.apiHelper.ApiHelper;
+import ru.education.aqajava.tests.lessons.lesson5.structure.helpers.ApiHelper;
 
 import java.io.IOException;
 import java.io.InputStream;

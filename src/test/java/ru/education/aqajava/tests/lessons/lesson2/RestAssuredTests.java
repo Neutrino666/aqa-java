@@ -98,8 +98,7 @@ public class RestAssuredTests {
                 .put("id", 5)
                 .put("name", dogsName)
                 .put("status", "available");
-
-
+        
         given()
                 .when()
                 .contentType(ContentType.JSON)

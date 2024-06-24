@@ -1,4 +1,4 @@
-package ru.education.aqajava.tests.lessons.lesson5.structure.apiHelper;
+package ru.education.aqajava.tests.lessons.lesson5.structure.helpers;
 
 import io.qameta.allure.Step;
 import io.qameta.allure.restassured.AllureRestAssured;

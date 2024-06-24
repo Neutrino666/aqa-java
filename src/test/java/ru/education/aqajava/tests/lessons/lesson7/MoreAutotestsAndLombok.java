@@ -6,8 +6,8 @@ import io.qameta.allure.TmsLink;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ru.education.aqajava.tests.lessons.lesson5.BaseTest;
-import ru.education.aqajava.tests.lessons.lesson5.structure.apiHelper.Endpoints;
+import ru.education.aqajava.tests.lessons.lesson5.structure.tests.BaseTest;
+import ru.education.aqajava.tests.lessons.lesson5.structure.helpers.Endpoints;
 import ru.education.aqajava.tests.lessons.lesson7.models.User;
 
 
