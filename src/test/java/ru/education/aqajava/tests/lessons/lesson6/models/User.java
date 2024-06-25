@@ -1,4 +1,4 @@
-package ru.education.aqajava.tests.lessons.lesson7.models;
+package ru.education.aqajava.tests.lessons.lesson6.models;
 
 import lombok.Data;
 
@@ -12,5 +12,4 @@ public class User {
     private String password;
     private String phone;
     private Integer userStatus;
-
 }

@@ -1,4 +1,4 @@
-package ru.education.aqajava.tests.lessons.lesson6;
+package ru.education.aqajava.tests.lessons.lesson7;
 
 import org.junit.jupiter.api.Test;
 

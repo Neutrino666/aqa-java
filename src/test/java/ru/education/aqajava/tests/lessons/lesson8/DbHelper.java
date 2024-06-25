@@ -1,4 +1,4 @@
-package ru.education.aqajava.tests.lessons.lesson9;
+package ru.education.aqajava.tests.lessons.lesson8;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

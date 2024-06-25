@@ -2,16 +2,22 @@
 
 ## План
 
-- Использование java объектов в качестве тела для запросов и ответов(POJO)
-- Добавление Lombok аннотации
-- рассказать больше про ООП сетеры,гетеры,конструкторы
+- БД
+- Sqlite
+- DBeaver
+- JDBC
 
 ## Лекция
 
 ## Ресурсы
 
-[Про Lombok](https://blog.skillfactory.ru/glossary/lombok/)
+[Пример БД Sqlite](https://www.sqlitetutorial.net/sqlite-sample-database/)  
+[Подключение к Sqlite с помощью Java](https://www.sqlitetutorial.net/sqlite-java/)  
+[Скачать DBeaver](https://dbeaver.io/download/)
+[Введение в работу с JDBC](https://www.baeldung.com/java-jdbc)
+[Справочник по SqlLite](https://www.tutorialspoint.com/sqlite/sqlite_create_database.htm)
 
 ## Самостоятельная работа
 
-- написать несколько тестов с использованием Java объектов без использования lombok и с использованием ломбок
+1. Выбрать любую другую таблицу в базе данных и вывести любую запись, но только одну.
+2. Вывести все записи с таблицы tracks, где в качестве жанра выбран "Pop".
