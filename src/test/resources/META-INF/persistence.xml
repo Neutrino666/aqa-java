@@ -5,7 +5,7 @@
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
              version="2.2">
     <persistence-unit name="chinook">
-        <class>ru.education.aqajava.tests.lessons.lesson8.Genres</class>
+        <class>ru.education.aqajava.tests.lessons.lesson8.model.Genres</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:sqlite:src/test/resources/sqlite/chinook.db"/>

@@ -7,14 +7,12 @@ import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ru.education.aqajava.tests.lessons.lesson5.structure.tests.BaseTest;
-import ru.education.aqajava.tests.lessons.lesson5.structure.helpers.Endpoints;
 import ru.education.aqajava.tests.lessons.lesson6.models.User;
 
 import static io.restassured.RestAssured.given;
 
 
-public class LombokTests extends BaseTest {
+public class LombokTests {
 
     @Test
     @Severity(SeverityLevel.CRITICAL)
@@ -27,8 +25,6 @@ public class LombokTests extends BaseTest {
         user.setFirstName("Генадий");
         user.setLastName("Трубогиб");
         user.setEmail("gena2025@mail.ru");
-
-        apiHelper.post(Endpoints.USER, user, resp200);
 
         given()
                 .when()

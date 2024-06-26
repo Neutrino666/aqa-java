@@ -1,37 +1,34 @@
 package ru.education.aqajava.tests.lessons.lesson7;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Database {
+public class DatabaseTests {
 
     String pathToDB = getClass().getClassLoader().getResource("sqlite/chinook.db").getPath();
     private final String dbUrl = "jdbc:sqlite:" + pathToDB;
 
     @Test
-    void getGenre() {
-        System.out.println(getAllGenres());
+    void getGenresTest() {
+        List<String> allGenres = getAllGenres();
+        System.out.println(allGenres);
+        Assertions.assertFalse(allGenres.isEmpty());
     }
 
     @Test
-    void printGenres() {
+    void addNewGenreTest() {
         insertNewGenre("Nu");
-        System.out.println(getAllGenres());
+        Assertions.assertTrue(getAllGenres().contains("Nu"));
     }
 
     @Test
-    void addNewGenre() {
-        insertNewGenre("Nu");
-        System.out.println(getAllGenres());
-    }
-
-    @Test
-    void deleteGenre() {
-        deleteGenre("Nu");
-        System.out.println(getAllGenres());
+    void deleteGenreTest() {
+        deleteGenre("Jazz");
+        Assertions.assertFalse(getAllGenres().contains("Jazz"));
     }
 
 

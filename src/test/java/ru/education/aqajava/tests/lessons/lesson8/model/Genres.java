@@ -1,17 +1,15 @@
-package ru.education.aqajava.tests.lessons.lesson8;
+package ru.education.aqajava.tests.lessons.lesson8.model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Entity
 @Table(name = "genres")
 public class Genres {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "GenreId")
     private Integer id;
 

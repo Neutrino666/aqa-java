@@ -1,4 +1,6 @@
-package ru.education.aqajava.tests.lessons.lesson8;
+package ru.education.aqajava.tests.lessons.lesson8.helper;
+
+import ru.education.aqajava.tests.lessons.lesson8.model.Genres;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -18,7 +20,7 @@ public class DbHelper {
 
     public void addNewGenre(String newGenreName) {
         Genres newGenre = new Genres();
-        newGenre.setId(11111);
+//        newGenre.setId(11111);
         newGenre.setName(newGenreName);
 
         entityManager.getTransaction().begin();
