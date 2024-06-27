@@ -14,13 +14,12 @@ public class DbHelper {
 
     public List<Genres> getAllGenres() {
         return entityManager
-                .createQuery("SELECT g FROM Genres g")
+                .createQuery("SELECT g FROM Genres g", Genres.class)
                 .getResultList();
     }
 
     public void addNewGenre(String newGenreName) {
         Genres newGenre = new Genres();
-//        newGenre.setId(11111);
         newGenre.setName(newGenreName);
 
         entityManager.getTransaction().begin();
@@ -30,7 +29,8 @@ public class DbHelper {
 
     public void deleteGenre(String genreName) {
         entityManager.getTransaction().begin();
-        Genres genre = entityManager.find(Genres.class, 11111);
+        Genres genre = entityManager.createQuery("SELECT g FROM Genres g WHERE g.name = '" + genreName + "'", Genres.class)
+                .getSingleResult();
         entityManager.remove(genre);
         entityManager.getTransaction().commit();
     }
